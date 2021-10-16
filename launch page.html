@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>MoneySav</title>
 </head>
 <body>
@@ -13,13 +14,13 @@
             <h1 id="LoginTitle">MoneySav</h1>
             <div class="form-border">
             <h2>Login</h2>
-            <input type="text" name="loginemail" placeholder="email">
-            <p>We could not find your email in </p>
-            <input type="password" name="loginpassword" placeholder="password">
-            <p>The</p>
-            <input type="button" value="Login">
+            <input type="text" name="loginemail" placeholder="email" class="login" id="loginemail">
+            <p id="invalid-email">We could not find your email in our domain. Please try another email or create an account. </p>
+            <input type="password" name="loginpassword" placeholder="password" class="login" id="loginpassword">
+            <p id="invalid-password">The password is incorrect</p>
+            <input type="button" value="Login" id="loginButton">
             <br>
-            <a href="">Create new account</a>
+            <a href="" id="newAcc">Create new account</a>
             </div>
         </form>
     </div>

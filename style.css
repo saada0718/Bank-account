@@ -1,20 +1,57 @@
+.bg{
+    background-color: gray;
+}
 .form-container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: white;
 }
 
 .form-border{
-    
     border-style: solid;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 140px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 2%;
+    box-shadow: 10px 10px;
+    background-color: white;
+
 }
 
 #LoginTitle{
     text-align: center;
 }
+
+.login{
+    padding-right: 60%;
+    padding-top: 20%;
+    font-size: 15px;
+}
+
+#invalid-password{
+    visibility: hidden;
+    color: red;
+    font-size: 12px;
+
+}
+
+#invalid-email{
+    visibility: hidden;
+    color: red;
+    font-size: 12px;
+}
+
+
+#LoginTitle{
+    font-family: Apple Chancery, cursive;
+    font-size: 300%;
+}
+
+#loginButton{
+    text-align: center;
+    padding: 5% 25%;
+}
+
+
