@@ -1,0 +1,20 @@
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+}
+
+.form-border{
+    
+    border-style: solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#LoginTitle{
+    text-align: center;
+}
