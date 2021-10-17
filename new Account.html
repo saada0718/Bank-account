@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" id="createNewAccount">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new account</title>
+    <link rel="stylesheet" href="new Account Style.css">
+
+</head>
+<body>
+
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <p id="modal"></p>
+        </div>
+    </div>
+
+    <div class="space"></div>
+    <span class="userinfo" id="Emailspan">Email: </span>
+    <input type="text" name="Regemail" placeholder="email" id="Regemail" class="InputCreate" >
+    <div class="space"></div>
+    <span class="userinfo">First Name: </span>
+    <input type="text" name="Regfname" placeholder="First Name" id="Regfname" class="InputCreate" >
+    <div class="space"></div>
+    
+    <span class="userinfo">Last Name: </span>    
+    
+    <input type="text" name="Reglname" placeholder="Last Name" id="Reglname" class="InputCreate" >
+    <div class="space"></div>
+    
+    <span class="userinfo">Date of birth: </span>
+    
+    <input type="date" name="Regdob" placeholder="Date of birth" id="Regdob"class="InputCreate"> 
+    <div class="space"></div>
+    
+    <span class="userinfo">Password: </span>
+    <input type="password" name="RegPassword" placeholder="Password" id="RegPassword" class="InputCreate">
+    <div class="space"></div>
+  
+    <span class="userinfo">Reenter Password: </span>
+    <input type="password" name="RegReenterPassword" placeholder="Reenter Password" id="RegReenterPassword"  class="InputCreate">
+    <div class="space"></div>
+    <div id="subBut">
+        <input type="button" value="Create Account" id="submitButton">
+    </div>
+    <script src="registration.js"></script>
+</body>
+</html>

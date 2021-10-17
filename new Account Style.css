@@ -1,0 +1,98 @@
+.space{
+    margin-top: 67px;
+}
+
+
+
+.userinfo{
+    padding-left: 35%;
+    font-size: 20px;
+   font-family: Klavika, cursive;
+}
+
+
+
+
+
+#Regemail{
+    margin-left: 105px;
+}
+
+#RegPassword{
+    margin-left: 77px;
+}
+
+
+#Regdob{
+    margin-left: 37px;
+    padding-right: 110px;
+}
+
+#Reglname{
+
+    margin-left:62px;
+
+}
+
+#Regfname{
+    margin-left: 50px;
+}
+
+.InputCreate{
+    border-style: solid;
+    padding-right: 80px;
+    padding-top: 20px;
+    border-radius: 2%;
+}
+
+#submitButton{
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: black;
+    color: yellow;
+
+}
+
+#createNewAccount{
+    background-color: pink;
+}
+
+#subBut{
+    text-align: right;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+
+.modal-content{
+    background-color: 	#CC9966;
+    margin-left: 43%;
+    margin-top: 200px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0  rgba(0,0,0, 0.2);
+
+}
+
+
+.closeBtn{
+    color: black;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
