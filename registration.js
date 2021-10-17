@@ -42,7 +42,7 @@ submitButton.addEventListener('click' , ()=>{
         "dob": dob,
         "password" : password,
         "transactions": {},
-        "dobsearch": {},};
+        "date-search": {},};
         saveJson(dataBase);
         clearElements();
         
@@ -106,7 +106,7 @@ function getUsers(){
             "dob": "18/07/2001",
             "password" : "testing",
             "transactions": {},
-            "dobsearch": {},
+            "date-search": {},
         }
     };
 }
