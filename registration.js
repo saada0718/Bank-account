@@ -102,7 +102,9 @@ function getUsers(){
             "fname": "Saad",
             "lname" : "Ahmed",
             "dob": "18/07/2001",
-            "password" : "testing"
+            "password" : "testing",
+            "transactions": {},
+            "dobsearch": {},
         }
     };
 }
