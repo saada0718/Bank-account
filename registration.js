@@ -40,7 +40,9 @@ submitButton.addEventListener('click' , ()=>{
         dataBase[currEmail] = { "fname": fname,
         "lname" : lname,
         "dob": dob,
-        "password" : password};
+        "password" : password,
+        "transactions": {},
+        "dobsearch": {},};
         saveJson(dataBase);
         clearElements();
         
