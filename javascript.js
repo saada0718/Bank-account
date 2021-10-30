@@ -3,12 +3,41 @@ const password = document.getElementById('loginpassword');
 const email = document.getElementById('loginemail');
 const invalidEmail = document.getElementById('invalid-email');
 const invalidPassword = document.getElementById('invalid-password');
-/* There are the elements the "Create a new Account Page" */
+/* There are the elements the "home page" */
+const  transactionHist  = document.getElementById('transhist');
+const deposit = document.getElementById('depo');
+const withdrawal = document.getElementById('withd');
+const send = document.getElementById('send');
 
 
+/* This is the functionality for the homepage */
+
+//This should take us to the page for to send money to another person
+send.addEventListener('click', ()=>{
+
+    window.location.href = "sendMoney.html";
+
+});
+
+//This should take you the menu that lets you put money into the bank account
+deposit.addEventListener('click',()=>{
+    window.location.href = "depositMoney.html";
+});
+
+//This should take you to the menu that lets you withdraw money
+withdrawal.addEventListener('click',()=>{
+    window.location.href = "withdrawMoney.html";
+});
+
+//This should take you to the menu that lets you view the transaction history
+transactionHist.addEventListener('click',()=>{
+
+    window.location.href = "transHistory.html";
+
+});
 
 
-
+/* This is the functionality for the launch page */
 login.addEventListener('click', ()=>{
     invalidEmail.style.visibility = 'hidden';
     invalidPassword.style.visibility = 'hidden';

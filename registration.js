@@ -45,6 +45,7 @@ submitButton.addEventListener('click' , ()=>{
         "date-search": {},};
         saveJson(dataBase);
         clearElements();
+        window.location.href = "launch page.html";
         
     }else{
         //Create a modal that states what the person got wrong

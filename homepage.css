@@ -1,0 +1,47 @@
+#form{
+    background-color: pink;
+
+}
+
+#header {
+    font-family: Apple Chancery, cursive;
+    font-size: 380%;
+    margin-bottom: 200px;
+    text-align: center;
+
+}
+
+
+#transhist{
+    padding-top: 2%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    margin-right: 3.5%;
+
+}
+
+#depo{
+    padding-top: 2%;
+    padding-right: 7%;
+    padding-bottom: 2%;
+    padding-left: 7.8%;
+    margin-right: 3.5%;
+}
+
+#withd{
+    padding-top: 2%;
+    padding-right: 6.7%;
+    padding-bottom: 2%;
+    padding-left: 6.7%;
+    margin-right: 3.5%;
+}
+
+#send{
+    padding-top: 2%;
+    padding-right: 8.2%;
+    padding-bottom: 2%;
+    padding-left: 8.5%;
+    margin-right: 3.5%;
+}
+
