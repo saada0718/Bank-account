@@ -1,3 +1,5 @@
+const { acceleratedmobilepageurl } = require("googleapis/build/src/apis/acceleratedmobilepageurl");
+
 const login = document.getElementById('loginButton');
 const password = document.getElementById('loginpassword');
 const email = document.getElementById('loginemail');
@@ -8,8 +10,34 @@ const  transactionHist  = document.getElementById('transhist');
 const deposit = document.getElementById('depo');
 const withdrawal = document.getElementById('withd');
 const send = document.getElementById('send');
+/* These are the elements from the transaction history */
+const sendMon = document.getElementById('sendMonsendMon');
+const sendEmail = document.getElementById('sendEmail');
+const amount = document.getElementById('amount');
+var currPerson;
 
-
+/* This is the functionality for the send money page */
+sendMon.addEventListener('click',()=>{
+    let users = getUsers();
+    let email = sendEmail.value;
+    let amnt = parseInt(amount.value);
+    if(users[email]==undefined)
+    {
+        alert("The email that you entered is not in our database");
+        sendEmail.value = "";
+    }
+    else
+    {
+        let nextPeron = users[email];
+        if(currPerson.funds-amount<0){
+            alert("You do not have enough money to fund this transaction.");
+        }else{
+            nextPeron.funds += amount;
+            currPerson.funds -= amount;
+            alert("Your transaction has been completed");
+        }
+    }
+});
 /* This is the functionality for the homepage */
 
 //This should take us to the page for to send money to another person
@@ -48,6 +76,7 @@ login.addEventListener('click', ()=>{
         invalidEmail.style.visibility = 'visible';
     }else{
         if(users[currEmail].password == currPassword){
+            //Put the current person object into this global variable currPerson = ;
            window.location.href = 'home page.html';
            email.value = "";
            password.value = "";
