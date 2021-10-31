@@ -12,36 +12,169 @@
 }
 
 
-#transhist{
-    padding-top: 2%;
-    padding-right: 3%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-    margin-right: 3.5%;
+
+@media (min-width: 1524px){
+    #transhist{
+        padding-top: 2%;
+        padding-right: 3%;
+        padding-bottom: 2%;
+        padding-left: 3%;
+        margin-right: 6%;
+        margin-left: 7%;
+    
+    }
+    
+    #depo{
+        padding-top: 2%;
+        padding-right: 7%;
+        padding-bottom: 2%;
+        padding-left: 7.8%;
+        margin-right: 6%;
+    }
+    
+    #withd{
+        padding-top: 2%;
+        padding-right: 6.7%;
+        padding-bottom: 2%;
+        padding-left: 6.7%;
+        margin-right: 6%;
+    }
+    
+    #send{
+        padding-top: 2%;
+        padding-right: 8.2%;
+        padding-bottom: 2%;
+        padding-left: 8.5%;
+        margin-right: 6%;
+    }
+    
+
+	
+	
+
+	
+}
+
+
+@media (max-width:  1523px){
+    @media(min-width: 800px){
+        #transhist{
+            padding-top: 2%;
+            padding-right: 3%;
+            padding-bottom: 2%;
+            padding-left: 3%;
+            margin-right: 3.5%;
+            
+        }
+            
+        #depo{
+            padding-top: 2%;
+            padding-right: 7%;
+            padding-bottom: 2%;
+            padding-left: 7.8%;
+            margin-right: 3.5%;
+        }
+            
+        #withd{
+            padding-top: 2%;
+            padding-right: 6.7%;
+            padding-bottom: 2%;
+            padding-left: 6.7%;
+            margin-right: 3.5%;
+        }
+            
+        #send{
+            padding-top: 2%;
+            padding-right: 8.2%;
+            padding-bottom: 2%;
+            padding-left: 8.5%;
+            margin-right: 3.5%;
+        }
+        
+
+    }
 
 }
 
-#depo{
-    padding-top: 2%;
-    padding-right: 7%;
-    padding-bottom: 2%;
-    padding-left: 7.8%;
-    margin-right: 3.5%;
+
+
+
+
+@media (max-width:  900px){
+    @media(min-width: 50px){  
+    #transhist{
+        padding-top: 1%;
+            padding-right: 3%;
+            padding-bottom: 1%;
+            padding-left: 3%;
+            margin-right: 0.1%;
+            margin-left: 0.1%;
+        
+        }
+        
+        #depo{
+            padding-top: 1%;
+            padding-right: 7%;
+            padding-bottom: 1%;
+            padding-left: 7.8%;
+            margin-right: 0.1%;
+        }
+        
+        #withd{
+            padding-top: 1%;
+            padding-right: 6.7%;
+            padding-bottom: 1%;
+            padding-left: 6.7%;
+            margin-right: 0.1%;
+        }
+        
+        #send{
+            padding-top: 1%;
+            padding-right: 8.2%;
+            padding-bottom: 1%;
+            padding-left: 8.5%;
+            margin-right: 0.1%;
+        }	
+    }
 }
 
-#withd{
-    padding-top: 2%;
-    padding-right: 6.7%;
-    padding-bottom: 2%;
-    padding-left: 6.7%;
-    margin-right: 3.5%;
+
+
+
+@media (max-width:  600px){
+    @media(min-width: 50px){  
+    #transhist{
+        padding-top: 1%;
+            padding-right: 1.9%;
+            padding-bottom: 1%;
+            padding-left: 1.9%;
+        
+        }
+        
+        #depo{
+            padding-top: 1%;
+            padding-right: 5.9%;
+            padding-bottom: 1%;
+            padding-left: 6.7%;
+        }
+        
+        #withd{
+            padding-top: 1%;
+            padding-right: 5.6%;
+            padding-bottom: 1%;
+            padding-left: 5.6%;
+        }
+        
+        #send{
+            padding-top: 1%;
+            padding-right: 7.3%;
+            padding-bottom: 1%;
+            padding-left: 7.4%;
+        }	
+    }
 }
 
-#send{
-    padding-top: 2%;
-    padding-right: 8.2%;
-    padding-bottom: 2%;
-    padding-left: 8.5%;
-    margin-right: 3.5%;
-}
+
+
+
 
