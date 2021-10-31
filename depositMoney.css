@@ -1,0 +1,29 @@
+#bg{
+    background-color: pink;
+}
+
+@media (max-width: 50x){
+    @media(min-width:6000px){
+        #depoMon{
+            margin-top: 40%;
+            margin-left: 35%;
+        }
+        #depo{
+            margin-top: 10%;
+            margin-left: 35%;
+        }
+    }
+}
+@media (max-width: 600px){
+    @media(min-width:50px){
+        #depoMon{
+            margin-top: 20%;
+            margin-left: 35%;
+        }
+        #depo{
+            margin-top: 10%;
+            margin-left: 35%;
+        }
+    }
+}
+
