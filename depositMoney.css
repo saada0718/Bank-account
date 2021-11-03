@@ -2,11 +2,32 @@
     background-color: pink;
 }
 
-@media (max-width: 50x){
-    @media(min-width:6000px){
+#depoMon{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 13px;    
+    font-size: 28px;
+
+}
+
+#depo{
+    padding-top:  10px;
+    padding-right: 60px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#title{
+    font-family: Apple Chancery, cursive;
+    font-size: 300%;
+    margin-left: 40%;
+}
+@media (max-width: 870px){
+    @media(min-width:600px){
         #depoMon{
-            margin-top: 40%;
+            margin-top: 18%;
             margin-left: 35%;
+            
         }
         #depo{
             margin-top: 10%;
@@ -27,3 +48,30 @@
     }
 }
 
+
+@media (max-width: 1000px){
+    @media(min-width: 870px){
+        #depoMon{
+            margin-top: 15%;
+            margin-left: 35%;
+        }
+        #depo{
+            margin-top: 7%;
+            margin-left: 35%;
+        }
+    }
+}
+
+
+@media (max-width: 1900px){
+    @media(min-width: 1000px){
+        #depoMon{
+            margin-top: 13%;
+            margin-left: 35%;
+        }
+        #depo{
+            margin-top: 5%;
+            margin-left: 35%;
+        }
+    }
+}
