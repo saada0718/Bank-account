@@ -1,0 +1,78 @@
+#bg{
+    background-color: pink;
+}
+
+#with{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 13px;    
+    font-size: 28px;
+
+}
+
+#withMon{
+    padding-top:  10px;
+    padding-right: 60px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#title{
+    font-family: Apple Chancery, cursive;
+    font-size: 300%;
+    margin-left: 40%;
+}
+@media (max-width: 870px){
+    @media(min-width:600px){
+        #with{
+            margin-top: 18%;
+            margin-left: 35%;
+            
+        }
+        #withMon{
+            margin-top: 10%;
+            margin-left: 35%;
+        }
+    }
+}
+@media (max-width: 600px){
+    @media(min-width:50px){
+        #with{
+            margin-top: 20%;
+            margin-left: 35%;
+        }
+        #withMon{
+            margin-top: 10%;
+            margin-left: 35%;
+        }
+    }
+}
+
+
+@media (max-width: 1000px){
+    @media(min-width: 870px){
+        #with{
+            margin-top: 15%;
+            margin-left: 35%;
+        }
+        #withMon{
+            
+            margin-top: 7%;
+            margin-left: 35%;
+        }
+    }
+}
+
+
+@media (max-width: 1900px){
+    @media(min-width: 1000px){
+        #with{
+            margin-top: 13%;
+            margin-left: 35%;
+        }
+        #withMon{
+            margin-top: 5%;
+            margin-left: 35%;
+        }
+    }
+}

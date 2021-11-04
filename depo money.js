@@ -17,6 +17,7 @@ depo.addEventListener('click',()=>{
         }else{
             currPerson.funds += mon;
             alert("Your balance has been updated!");
+            money.value = "";
             saveUsers(users);
         }
     }

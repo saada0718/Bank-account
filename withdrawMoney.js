@@ -1,36 +1,38 @@
-/* These are the elements from the transaction history */
-const sendMon = document.getElementById('sendMon2');
-const sendEmail = document.getElementById('sendemail');
-const amount = document.getElementById('amount');
-/* This is the functionality for the send money page */
+/* There are the elements from the deposit menu */
+const withdraw = document.getElementById('with');
+const money = document.getElementById('withMon');
 
-sendMon.addEventListener('click',()=>{
-    let users = getUsers();
-    let email = sendEmail.value;
-    let amnt = amount.value;
-    if(users[email]==undefined)
-    {
-        alert("The email that you entered is not in our database");
-        sendEmail.value = "";
+
+/* This is the functionality for the deposit money page */
+
+withdraw.addEventListener('click',()=>{
+    var users = getUsers();
+    var mon = money.value;
+    var currPerson = users[localStorage['email']];
+    if(isNumeric(mon)){
+        mon = parseInt(mon);
+        if(mon<0){
+            money.value = "";
+            alert("You cannot withdraw a negative amount");
+        }else{
+            if(currPerson.funds - mon <0){
+                currPerson.funds -= mon;
+                alert("Your balance has been updated!");
+                money.value = "";
+                users[localStorage['email']] = currPerson;
+                saveUsers(users);
+            }else{
+                alert("You do not have enough funds for this transaction!");
+                money.value = "";
+            }
+        }
     }
     else
     {
-        let nextPeron = users[email];
-        let currPerson = users[localStorage['email']];
-        if(!isNumeric(amnt)){
-            alert("Please enter a numeric value");
-            return;
-        }
-        amnt = parseFloat(amnt);
-        if(currPerson.funds-amnt<0){
-            alert("You do not have enough money to fund this transaction.");
-        }else{
-            nextPeron.funds += amnt;
-            currPerson.funds -= amnt;
-            saveUsers(users);
-            alert("Your transaction has been completed");
-        }
+        money.value = "";
+        alert("You did not enter a numeric value!");
     }
+
 });
 
 /*
@@ -45,7 +47,6 @@ function isNumeric(str){
 }
 
 
-
 //This function is responsible for getting the json
 //file and then returning
 function getUsers(){
@@ -56,7 +57,7 @@ function getUsers(){
             "dob": "18/07/2001",
             "address": "13 Regency Place, Brockville, Ontario, Canada",
             "password" : "testing",
-            "funds" : 0
+            "funds": 0
         },
 
         "saadahmed5@cmail.carleton.ca" : {
@@ -65,7 +66,7 @@ function getUsers(){
             "dob": "18/07/2001",
             "address": "13 Regency Place, Brockville, Ontario, Canada",
             "password" : "test",
-            "funds": 0
+            "funds":0
         }
     };
 }
