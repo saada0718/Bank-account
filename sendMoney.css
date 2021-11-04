@@ -33,14 +33,14 @@
         }
         
         #sendemail{
-            margin-top: 25%;
+            margin-top: 23%;
         }
         #amount{
-            margin-top: 25%;
+            margin-top: 23%;
         }
 
-        #sendMon{
-            margin-top: 15%;
+        #sendMon2{
+            margin-top: 13%;
             padding-right: 12.5%;
             padding-left: 12.5%;
             padding-top: 2.5%;
@@ -67,7 +67,7 @@
         #amount{
             margin-top: 15%;
         }
-        #sendMon{
+        #sendMon2{
             margin-top: 7%;
             padding-right: 12.5%;
             padding-left: 12.5%;
@@ -95,7 +95,7 @@
         #amount{
             margin-top: 10%;
         }
-        #sendMon{
+        #sendMon2{
             margin-top: 2%;
             padding-right: 12.5%;
             padding-left: 12.5%;
