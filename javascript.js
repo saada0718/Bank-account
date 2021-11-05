@@ -51,7 +51,10 @@ function getUsers(){
             "lname" : "Ahmed",
             "dob": "18/07/2001",
             "address": "13 Regency Place, Brockville, Ontario, Canada",
-            "password" : "testing"
+            "password" : "testing",
+            "funds": 0,
+            "all": {},
+            "head": {}
         },
 
         "saadahmed5@cmail.carleton.ca" : {
@@ -59,7 +62,16 @@ function getUsers(){
             "lname" : "Ahmed",
             "dob": "18/07/2001",
             "address": "13 Regency Place, Brockville, Ontario, Canada",
-            "password" : "test"
+            "password" : "test",
+            "funds":0,
+            "all": {},
+            "head": {}
         }
     };
+}
+
+//The purpose of this function is to save the users to a json file
+function saveUsers(usrObj){
+
+
 }

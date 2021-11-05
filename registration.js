@@ -98,6 +98,7 @@ function validEmail(currEmail){
     return currEmail.match(pattern);
 }
 
+//This function is responsible for getting the json
 //file and then returning
 function getUsers(){
     return {
@@ -105,15 +106,28 @@ function getUsers(){
             "fname": "Saad",
             "lname" : "Ahmed",
             "dob": "18/07/2001",
+            "address": "13 Regency Place, Brockville, Ontario, Canada",
             "password" : "testing",
-            "transactions": {},
-            "date-search": {},
+            "funds": 0,
+            "all": {},
+            "head": {}
+        },
+
+        "saadahmed5@cmail.carleton.ca" : {
+            "fname": "Saad",
+            "lname" : "Ahmed",
+            "dob": "18/07/2001",
+            "address": "13 Regency Place, Brockville, Ontario, Canada",
+            "password" : "test",
+            "funds":0,
+            "all": {},
+            "head": {}
         }
     };
 }
 
+//The purpose of this function is to save the users to a json file
+function saveUsers(usrObj){
 
-//This function is responsible for saving the JSON file
-function saveJson(obj){
 
 }

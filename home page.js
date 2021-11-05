@@ -27,3 +27,5 @@ transactionHist.addEventListener('click',()=>{
     window.location.href = "transHistory.html";
 
 });
+
+

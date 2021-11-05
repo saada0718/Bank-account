@@ -15,7 +15,7 @@ sendMon.addEventListener('click',()=>{
     }
     else
     {
-        let nextPeron = users[email];
+        let nextPerson = users[email];
         let currPerson = users[localStorage['email']];
         if(!isNumeric(amnt)){
             alert("Please enter a numeric value");
@@ -26,13 +26,44 @@ sendMon.addEventListener('click',()=>{
             alert("You do not have enough money to fund this transaction.");
         }else{
             nextPeron.funds += amnt;
+            var currDate = datetime();
+            nextPerson.head = add(nextPerson.head,[currDate,amnt]);
+            currPerson.head = add(currPerson.head,[currDate,-amnt]);
+            currPerson.past90.push([currDate,amnt]);
+            nextPerson.all[currDate] = amtn;
+            currPerson.all[currDate] = -amnt;
             currPerson.funds -= amnt;
             saveUsers(users);
             alert("Your transaction has been completed");
         }
     }
 });
+//The purpose of this function is to record the transaction in a linked-list
+function add(head,ttl){
+    var i = 0;
+    var temp = head;
+    while(temp != null){
+        temp = temp.next;
+        i = i+1;
+        if(i==90){
+            head.date = ttl;
+            break;
+        }
+    }
+    if(i<90) temp.next = { 'date': ttl,'next':null};
+    return head;
+}
 
+function datetime(){
+    var currentdate = new Date();
+    return currentdate.getMonth() + '/' + 
+    currentdate.getDate() + '/'+
+    currentdate.getFullYear() +  '/'+
+    ' ' + 
+    currentdate.getHours() +
+    ':' + 
+    currentdate.getMinutes();
+}
 /*
     The purpose of this function is to check if the string is numeric
     This functions was obtained from the following website: 
