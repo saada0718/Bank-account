@@ -29,13 +29,4 @@ function getUsers(){
     return {};
 }
 
-//The purpose of this function is to save the users to a json file
-function saveUsers(usrObj){
-    fs.writeFile( './customer.json', JSON.stringify(usrObj), err =>{
-        if(err){
-            console.log(err);
-        }else{
-         console.log('File was written successfully!');   
-        }
-    });
-}
+

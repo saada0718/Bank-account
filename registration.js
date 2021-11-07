@@ -28,7 +28,6 @@ submitButton.addEventListener('click' , ()=>{
     let password = Regpassword.value;
     let valPassword = validPassword(password);
     let samePassword = password === RegReenterPassword.value;
-
     if(
         valEmail
         && notPresent
@@ -36,20 +35,26 @@ submitButton.addEventListener('click' , ()=>{
         && valPassword
         && samePassword
     ){
+        
         //Put the infromation in to the file
         dataBase[currEmail] = { "fname": fname,
         "lname" : lname,
         "dob": dob,
         "password" : password,
         "transactions": {},
-        "date-search": {},};
-        saveJson(dataBase);
+        "date-search": {}};
+
+        saveUsers(dataBase);
+        alert();
+        return; 
         clearElements();
         window.location.href = "launch page.html";
         
     }else{
         //Create a modal that states what the person got wrong
         var wrong = "Please make make the following adjustments: ";
+        if(fname=="" || fname == null) wrong += "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Enter a first name";
+        if(lname == "" || lname == null) wrong += "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Enter a last name";
         if(!valEmail) wrong += "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The email is wrong";
         if(!notPresent) wrong += "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The emails is already in the database try a new email";
         if(dob==="") wrong+="<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Enter an age"
@@ -101,33 +106,23 @@ function validEmail(currEmail){
 //This function is responsible for getting the json
 //file and then returning
 function getUsers(){
-    return {
-        "saadahmed0718@gmail.com" : {
-            "fname": "Saad",
-            "lname" : "Ahmed",
-            "dob": "18/07/2001",
-            "address": "13 Regency Place, Brockville, Ontario, Canada",
-            "password" : "testing",
-            "funds": 0,
-            "all": {},
-            "head": {}
-        },
-
-        "saadahmed5@cmail.carleton.ca" : {
-            "fname": "Saad",
-            "lname" : "Ahmed",
-            "dob": "18/07/2001",
-            "address": "13 Regency Place, Brockville, Ontario, Canada",
-            "password" : "test",
-            "funds":0,
-            "all": {},
-            "head": {}
-        }
-    };
+    try{
+        let jsonString = fs.readFileSync('./customer.json','utf-8');
+        let customer = JSON.parse(jsonString);
+        return customer;
+    } catch (err){
+        console.log(err);
+        return {};
+    }
 }
 
 //The purpose of this function is to save the users to a json file
 function saveUsers(usrObj){
-
-
+    fs.writeFile( './customer.json', JSON.stringify(usrObj), err =>{
+        if(err){
+            console.log(err);
+        }else{
+         console.log('File was written successfully!');   
+        }
+    });
 }
