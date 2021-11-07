@@ -19,7 +19,6 @@ withdraw.addEventListener('click',()=>{
                 var currDate = datetime();
                 currPerson.funds -= mon;
                 currPerson.head = add(currPerson.head,[currDate,-mon]);
-                currPerson.all[currDate] = -mon;
                 alert("Your balance has been updated!");
                 money.value = "";
                 users[localStorage['email']] = currPerson;
@@ -62,7 +61,7 @@ function add(head,ttl){
             break;
         }
     }
-    if(i<90) temp.next = { 'date': ttl,'next':null};
+    if(i<90) temp.next = {'date': ttl,'next':null};
     return head;
 }
 /*
@@ -80,33 +79,24 @@ function isNumeric(str){
 //This function is responsible for getting the json
 //file and then returning
 function getUsers(){
-    return {
-        "saadahmed0718@gmail.com" : {
-            "fname": "Saad",
-            "lname" : "Ahmed",
-            "dob": "18/07/2001",
-            "address": "13 Regency Place, Brockville, Ontario, Canada",
-            "password" : "testing",
-            "funds": 0,
-            "all": {},
-            "head": {}
-        },
-
-        "saadahmed5@cmail.carleton.ca" : {
-            "fname": "Saad",
-            "lname" : "Ahmed",
-            "dob": "18/07/2001",
-            "address": "13 Regency Place, Brockville, Ontario, Canada",
-            "password" : "test",
-            "funds":0,
-            "all": {},
-            "head": {}
-        }
-    };
+    try{
+        let jsonString = fs.readFileSync('./customer.json','utf-8');
+        let customer = JSON.parse(jsonString);
+        return customer;
+    } catch (err){
+        console.log(err);
+    }
+    return {};
+    
 }
 
 //The purpose of this function is to save the users to a json file
 function saveUsers(usrObj){
-
-
+    fs.writeFile( './customer.json', JSON.stringify(usrObj), err =>{
+        if(err){
+            console.log(err);
+        }else{
+         console.log('File was written successfully!');   
+        }
+    });
 }

@@ -1,0 +1,33 @@
+#bg{
+    background-color: pink;
+}
+
+#with{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 13px;    
+    font-size: 28px;
+
+}
+
+#title{
+    font-family: Apple Chancery, cursive;
+    font-size: 300%;
+    margin-left: 40%;
+}
+
+#addHere{
+    font-size: 150%;
+    margin-left: 40%;
+    margin-top: 5%;
+
+}
+/*
+@media (max-width: 5000px){
+    @media(min-width:1150px){
+        #addHere{
+            margin-left: 40%;
+        }
+    }
+}
+*/
